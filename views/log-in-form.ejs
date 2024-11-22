@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In</title>
+    <link rel="stylesheet" href="/styles/tailwind.css" />
+  </head>
+  <body class="flex flex-col items-center justify-center bg-slate-200">
+    <div class="mb-2">
+      <% if (errors && errors.length) { %>
+      <ul>
+        <% errors.forEach((error) => { %>
+        <li class="text-sm text-red-700"><%= error.msg %></li>
+        <% }) %>
+      </ul>
+      <% } %>
+    </div>
+
+    <form
+      action="/log-in"
+      method="POST"
+      class="w-full max-w-sm flex flex-col bg-white rounded-lg p-6 text-sm mb-1"
+    >
+      <h1 class="text-center text-lg mb-4"><%= title %></h1>
+      <label for="username">Username</label>
+      <input
+        class="border-2 border-slate-200 rounded-full p-2 mb-2"
+        id="username"
+        name="username"
+        type="text"
+        value="<%= typeof username !== 'undefined' ? username : '' %>"
+        required
+      />
+      <label for="password">Password</label>
+      <input
+        class="border-2 border-slate-200 rounded-full p-2 mb-2"
+        id="password"
+        name="password"
+        type="password"
+        required
+      />
+      <button class="bg-sky-700 rounded-full p-2 mt-2 text-white font-semibold">
+        Log In
+      </button>
+    </form>
+    <p>
+      Don't have an account yet?
+      <a href="/sign-up" class="text-sky-700 underline">Sign Up</a>
+    </p>
+  </body>
+</html>

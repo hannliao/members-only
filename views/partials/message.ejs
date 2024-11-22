@@ -1,0 +1,15 @@
+<div class="message-container">
+  <ul class="message">
+    <li class="username"><%= message.username%></li>
+    <li class="timestamp">
+      <%= new Date(message.timestamp).toLocaleString() %>
+    </li>
+    <li class="text"><%= message.text%></li>
+  </ul>
+  <button
+    class="open-button"
+    onClick="window.location.href = '/open/<%=message.id%>' "
+  >
+    >
+  </button>
+</div>

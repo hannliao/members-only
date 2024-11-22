@@ -1,0 +1,7 @@
+<div>
+  <% if (messages.length) { %> <% messages.forEach((message) => { %>
+  <p><%- include('message', { message }) %></p>
+  <% }) %> <% } else { %>
+  <p>No messages found</p>
+  <% } %>
+</div>
