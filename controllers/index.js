@@ -1,4 +1,5 @@
 const db = require('../db/queries');
+const { formatTimestamp } = require('../helpers/helpers');
 
 module.exports = {
   async get(req, res) {
@@ -10,6 +11,7 @@ module.exports = {
       title: 'Home',
       main: 'partials/messages',
       user: req.user,
+      formatTimestamp,
       messages,
     });
   },

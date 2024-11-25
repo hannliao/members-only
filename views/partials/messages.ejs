@@ -1,4 +1,11 @@
-<div>
+<a
+  href="/message"
+  class="w-full max-w-screen-lg min-w-80 bg-red-300 text-white text-center text-4xl rounded-lg p-3"
+  >+</a
+>
+<div
+  class="w-full max-w-screen-lg min-w-80 text-center flex-1 bg-stone-100 rounded-lg py-5 mb-10"
+>
   <% if (messages.length) { %> <% messages.forEach((message) => { %>
   <p><%- include('message', { message }) %></p>
   <% }) %> <% } else { %>

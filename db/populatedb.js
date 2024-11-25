@@ -16,7 +16,7 @@ const SQL = `
     title VARCHAR(255),
     text VARCHAR(255),
     timestamp TIMESTAMP,
-    user_id INTEGER
+    username VARCHAR(255)
   );
 `;
 

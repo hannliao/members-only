@@ -49,8 +49,8 @@ async function updateUser(user) {
 
 async function createMessage(message) {
   await pool.query(
-    `INSERT INTO messages (title, text, timestamp, user_id) VALUES ($1, $2, $3, $4)`,
-    [message.title, message.text, message.timestamp, message.user_id]
+    `INSERT INTO messages (title, text, timestamp, username) VALUES ($1, $2, $3, $4)`,
+    [message.title, message.text, message.timestamp, message.username]
   );
 }
 

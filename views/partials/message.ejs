@@ -1,15 +1,9 @@
 <div class="message-container">
-  <ul class="message">
-    <li class="username"><%= message.username%></li>
-    <li class="timestamp">
-      <%= new Date(message.timestamp).toLocaleString() %>
+  <ul class="message text-left bg-white rounded-lg p-5 mb-5">
+    <li class="title font-bold"><%= message.title%></li>
+    <li class="author-timestamp text-xs">
+      @<%= message.username %> | <%= formatTimestamp(message.timestamp) %>
     </li>
-    <li class="text"><%= message.text%></li>
+    <li class="text mt-1"><%= message.text%></li>
   </ul>
-  <button
-    class="open-button"
-    onClick="window.location.href = '/open/<%=message.id%>' "
-  >
-    >
-  </button>
 </div>

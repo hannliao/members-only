@@ -11,6 +11,8 @@ const db = require('./db/queries');
 const indexRouter = require('./routes/index');
 const logInRouter = require('./routes/log-in');
 const signUpRouter = require('./routes/sign-up');
+const accountRouter = require('./routes/account');
+const messageRouter = require('./routes/message');
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -68,6 +70,8 @@ app.use((req, res, next) => {
 app.use('/', indexRouter);
 app.use('/log-in', logInRouter);
 app.use('/sign-up', signUpRouter);
+app.use('/account', accountRouter);
+app.use('/message', messageRouter);
 
 app.use((err, req, res, next) => {
   console.error(err);

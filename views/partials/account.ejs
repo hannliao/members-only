@@ -1,0 +1,15 @@
+<div class="flex space-around items-center bg-white rounded-lg p-10">
+  <ul>
+    <li></li>
+    <li class="underline p-4"><a href="/account/profile">Edit Profile</a></li>
+    <!-- show that Profile (or "Dashboard") is selected -->
+    <li class="underline p-4">
+      <a href="/account/membership">My Status</a>
+    </li>
+    <!-- link to membership status info page -->
+    <li class="underline p-4"><a href="/account/log-out">Log out</a></li>
+    <!-- make sure user can't go back, need to log in again-->
+  </ul>
+
+  <h1 class="ml-10 text-4xl font-bold">Hi, <%= currentUser.firstname %></h1>
+</div>
