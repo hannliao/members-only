@@ -6,7 +6,7 @@
     <title>Log In</title>
     <link rel="stylesheet" href="/styles/tailwind.css" />
   </head>
-  <body class="flex flex-col items-center justify-center bg-slate-200">
+  <body class="flex flex-col items-center justify-center bg-stone-100">
     <div class="mb-2">
       <% if (errors && errors.length) { %>
       <ul>
@@ -25,19 +25,21 @@
       <h1 class="text-center text-lg mb-4"><%= title %></h1>
       <label for="username">Username</label>
       <input
-        class="border border-slate-200 rounded-full p-2 mb-2"
+        class="border rounded-full p-2 mb-2"
         id="username"
         name="username"
         type="text"
         value="<%= typeof username !== 'undefined' ? username : '' %>"
+        maxlength="100"
         required
       />
       <label for="password">Password</label>
       <input
-        class="border border-slate-200 rounded-full p-2 mb-2"
+        class="border rounded-full p-2 mb-2"
         id="password"
         name="password"
         type="password"
+        maxlength="100"
         required
       />
       <button

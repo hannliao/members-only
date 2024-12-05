@@ -1,9 +1,11 @@
 <div class="message-container">
   <ul class="message text-left bg-white rounded-lg p-5 mb-5">
     <li class="title font-bold"><%= message.title%></li>
+    <% if (user.membership == 'elite') { %>
     <li class="author-timestamp text-xs">
       @<%= message.username %> | <%= formatTimestamp(message.timestamp) %>
     </li>
+    <% } %>
     <li class="text mt-1"><%= message.text%></li>
   </ul>
 </div>

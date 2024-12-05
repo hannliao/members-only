@@ -32,16 +32,29 @@ async function updateUser(user) {
   await pool.query(
     `
     UPDATE users
-    SET firstname = $2, lastname = $3, username = $4, password = $5, membership = $6
+    SET firstname = $2, lastname = $3, username = $4
     WHERE id = $1`,
-    [
-      user.id,
-      user.firstname,
-      user.lastname,
-      user.username,
-      user.password,
-      user.membership,
-    ]
+    [user.id, user.firstname, user.lastname, user.username]
+  );
+}
+
+async function updatePassword(user) {
+  await pool.query(
+    `
+    UPDATE users
+    SET password = $2
+    WHERE id = $1`,
+    [user.id, user.password]
+  );
+}
+
+async function updateMembership(id) {
+  await pool.query(
+    `
+    UPDATE users
+    SET membership = 'elite'
+    WHERE id = $1`,
+    [id]
   );
 }
 
@@ -75,6 +88,8 @@ module.exports = {
   getUserById,
   getUserByUsername,
   updateUser,
+  updatePassword,
+  updateMembership,
   createMessage,
   getMessage,
   getAllMessages,

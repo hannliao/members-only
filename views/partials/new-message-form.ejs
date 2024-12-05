@@ -4,23 +4,26 @@
   class="flex flex-col bg-white text-sm rounded-lg p-6"
 >
   <h1 class="text-center font-bold text-base mb-2">New Message</h1>
-  <label for="title">Title*</label>
+  <label for="title">Title</label>
   <input
     class="border rounded-lg p-2 mb-2"
     id="title"
     name="title"
     type="text"
+    maxlength="100"
     required
   />
-  <label for="text">Message*</label>
+  <label for="text">Message</label>
   <textarea
     class="border rounded-lg p-2 mb-2"
     id="text"
     name="text"
     cols="30"
-    rows="10"
+    rows="7"
+    maxlength="250"
     required
   ></textarea>
+  <p class="text-xs text-gray-400 italic text-right">250 character limit</p>
   <button
     class="bg-red-300 rounded-full p-2 mt-5 text-white text-sm font-semibold"
   >

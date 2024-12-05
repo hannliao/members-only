@@ -6,7 +6,7 @@
     <title>Sign Up</title>
     <link rel="stylesheet" href="/styles/tailwind.css" />
   </head>
-  <body class="flex flex-col items-center justify-center bg-slate-200">
+  <body class="flex flex-col items-center justify-center bg-stone-100">
     <div class="mb-2">
       <% if (errors && errors.length) { %>
       <ul>
@@ -25,45 +25,50 @@
       <h1 class="text-center text-lg mb-4"><%= title %></h1>
       <label for="firstname">First Name*</label>
       <input
-        class="border border-slate-200 rounded-full p-2 mb-2"
+        class="border rounded-full p-2 mb-2"
         id="firstname"
         name="firstname"
         type="text"
+        maxlength="100"
         value="<%= typeof firstname !== 'undefined' ? firstname : '' %>"
         required
       />
       <label for="lastname">Last Name*</label>
       <input
-        class="border border-slate-200 rounded-full p-2 mb-2"
+        class="border rounded-full p-2 mb-2"
         id="lastname"
         name="lastname"
         type="text"
+        maxlength="100"
         value="<%= typeof lastname !== 'undefined' ? lastname : '' %>"
         required
       />
       <label for="username">Username*</label>
       <input
-        class="border border-slate-200 rounded-full p-2 mb-2"
+        class="border rounded-full p-2 mb-2"
         id="username"
         name="username"
         type="text"
+        maxlength="100"
         value="<%= typeof username !== 'undefined' ? username : '' %>"
         required
       />
       <label for="password">Password*</label>
       <input
-        class="border border-slate-200 rounded-full p-2 mb-2"
+        class="border rounded-full p-2 mb-2"
         id="password"
         name="password"
         type="password"
+        maxlength="100"
         required
       />
       <label for="confirmPwd">Confirm Password*</label>
       <input
-        class="border border-slate-200 rounded-full p-2 mb-2"
+        class="border rounded-full p-2 mb-2"
         id="confirmPwd"
         name="confirmPwd"
         type="password"
+        maxlength="100"
         required
       />
       <button

@@ -6,50 +6,44 @@
   <h1 class="text-center font-bold text-base mb-2"><%= title %></h1>
   <label for="firstname">First Name*</label>
   <input
-    class="border border-slate-200 rounded-full p-2 mb-2"
+    class="border rounded-full p-2 mb-2"
     id="firstname"
     name="firstname"
     type="text"
-    value="<%= typeof firstname !== 'undefined' ? firstname : '' %>"
+    value="<%= typeof user.firstname !== 'undefined' ? user.firstname : '' %>"
+    maxlength="100"
     required
   />
   <label for="lastname">Last Name*</label>
   <input
-    class="border border-slate-200 rounded-full p-2 mb-2"
+    class="border rounded-full p-2 mb-2"
     id="lastname"
     name="lastname"
     type="text"
-    value="<%= typeof lastname !== 'undefined' ? lastname : '' %>"
+    value="<%= typeof user.lastname !== 'undefined' ? user.lastname : '' %>"
+    maxlength="100"
     required
   />
   <label for="username">Username*</label>
   <input
-    class="border border-slate-200 rounded-full p-2 mb-2"
+    class="border rounded-full p-2 mb-2"
     id="username"
     name="username"
     type="text"
-    value="<%= typeof username !== 'undefined' ? username : '' %>"
+    value="<%= typeof user.username !== 'undefined' ? user.username : '' %>"
+    maxlength="100"
     required
   />
-  <label for="password">Password*</label>
-  <input
-    class="border border-slate-200 rounded-full p-2 mb-2"
-    id="password"
-    name="password"
-    type="password"
-    required
-  />
-  <label for="confirmPwd">Confirm Password*</label>
-  <input
-    class="border border-slate-200 rounded-full p-2 mb-2"
-    id="confirmPwd"
-    name="confirmPwd"
-    type="password"
-    required
-  />
+
   <button
     class="bg-red-300 rounded-full p-2 mt-5 text-white text-sm font-semibold"
   >
     Save
   </button>
+  <a
+    href="/account"
+    class="border rounded-full p-2 mt-3 text-center text-gray-400 text-sm font-semibold"
+  >
+    Cancel
+  </a>
 </form>

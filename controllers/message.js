@@ -7,17 +7,12 @@ module.exports = {
       main: 'partials/new-message-form',
     });
   },
-  async post(req, res) {
-    if (!req.user) {
-      return res.redirect('log-in');
-    }
-    const user = await db.getUserById(req.user.id);
-
+  async post(req, res, next) {
     const message = {
       title: req.body.title,
       text: req.body.text,
       timestamp: new Date(),
-      username: user.username,
+      username: req.user.username,
     };
 
     try {

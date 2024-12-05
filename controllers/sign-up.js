@@ -27,7 +27,7 @@ exports.createUserPost = [
         lastname: req.body.lastname,
         username: req.body.username,
         password: hashedPassword,
-        membership: 'newbie',
+        membership: 'basic',
       };
       await db.createUser(user);
       res.redirect('/');
