@@ -93,6 +93,7 @@ app.use('/sign-up', signUpRouter);
 app.use('/', ensureAuthenticated, indexRouter);
 app.use('/account', ensureAuthenticated, accountRouter);
 app.use('/message', ensureAuthenticated, messageRouter);
+app.all('*', (req, res) => res.redirect('/'));
 
 app.use((err, req, res, next) => {
   console.error(err);

@@ -1,11 +1,24 @@
-<div class="message-container">
-  <ul class="message text-left bg-white rounded-lg p-5 mb-5">
+<div
+  class="flex justify-between items-center bg-white rounded-lg p-5 mb-5 group"
+>
+  <ul class="text-left">
     <li class="title font-bold"><%= message.title%></li>
-    <% if (user.membership == 'elite') { %>
+    <% if (user.membership === 'elite') { %>
     <li class="author-timestamp text-xs">
       @<%= message.username %> | <%= formatTimestamp(message.timestamp) %>
     </li>
     <% } %>
     <li class="text mt-1"><%= message.text%></li>
   </ul>
+  <% if (user.admin) { %>
+  <form
+    action="/message/<%= message.id %>"
+    method="POST"
+    class="opacity-0 group-hover:opacity-100 transition-opacity"
+  >
+    <button>
+      <img src="/icons/trash-outline.svg" alt="delete" class="min-w-6 m-2" />
+    </button>
+  </form>
+  <% } %>
 </div>

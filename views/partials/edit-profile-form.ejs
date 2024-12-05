@@ -34,9 +34,12 @@
     maxlength="100"
     required
   />
-
+  <label for="admin" class="text-center">
+    Is Admin? <input id="admin" name="admin" type="checkbox" class="m-2"
+    <%=user.admin ? 'checked' : '' %> />
+  </label>
   <button
-    class="bg-red-300 rounded-full p-2 mt-5 text-white text-sm font-semibold"
+    class="bg-red-300 hover:bg-hoverRed rounded-full p-2 mt-5 text-white text-sm font-semibold"
   >
     Save
   </button>

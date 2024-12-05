@@ -1,23 +1,23 @@
-<div class="flex space-around items-center bg-white rounded-lg p-20">
+<div class="flex space-around items-center bg-white rounded-lg p-10">
   <ul>
-    <li class="my-5">
-      <a href="/account/membership" class="underline p-2">My Status</a>
+    <li class="my-5 text-right">
+      <a href="/account/membership" class="underline">My Status</a>
     </li>
-    <li class="my-5">
-      <a href="/account/profile" class="underline p-2">Edit Profile</a>
+    <li class="my-5 text-right">
+      <a href="/account/profile" class="underline">Edit Profile</a>
     </li>
-    <li class="my-5">
-      <a href="/account/profile/password" class="underline p-2"
-        >Change Password</a
-      >
+    <li class="my-5 text-right">
+      <a href="/account/profile/password" class="underline">Change Password</a>
     </li>
-    <li class="my-5">
-      <a href="/account/log-out" class="underline p-2">Log out</a>
+    <li class="my-5 text-right">
+      <a href="/account/log-out" class="underline">Log out</a>
     </li>
   </ul>
 
   <div class="flex flex-col items-center ml-10">
-    <h1 class="text-4xl font-bold">Hi, <%= currentUser.firstname %></h1>
+    <h1 class="text-center text-4xl font-bold">
+      Hi, <%= currentUser.firstname %>
+    </h1>
     <p class="text-center text-lg font-semibold p-2 m-4">
       <%= currentUser.membership %> member
     </p>

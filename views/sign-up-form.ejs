@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/styles/tailwind.css" />
   </head>
   <body class="flex flex-col items-center justify-center bg-stone-100">
+    <h1 class="font-custom font-bold text-2xl p-5 mx-5">members only club</h1>
     <div class="mb-2">
       <% if (errors && errors.length) { %>
       <ul>
@@ -71,6 +72,9 @@
         maxlength="100"
         required
       />
+      <label for="admin" class="text-center"
+        >Is Admin?<input id="admin" name="admin" type="checkbox" class="m-2"
+      /></label>
       <button
         class="bg-sky-700 rounded-full p-2 mt-5 text-white text-sm font-semibold"
       >

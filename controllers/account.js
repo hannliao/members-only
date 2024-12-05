@@ -66,6 +66,7 @@ async function editProfilePost(req, res) {
     firstname: req.body.firstname,
     lastname: req.body.lastname,
     username: req.body.username,
+    admin: req.body.admin === 'on',
   };
   await db.updateUser(user);
   res.redirect('/account');

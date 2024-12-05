@@ -2,7 +2,11 @@
 module.exports = {
   content: ['./views/**/*.ejs'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        hoverRed: '#f59b9b',
+      },
+    },
   },
   plugins: [],
 };

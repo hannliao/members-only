@@ -22,12 +22,14 @@ exports.createUserPost = [
     }
     try {
       const hashedPassword = await bcrypt.hash(req.body.password, 10);
+      const isAdmin = req.body.admin === 'on';
       const user = {
         firstname: req.body.firstname,
         lastname: req.body.lastname,
         username: req.body.username,
         password: hashedPassword,
         membership: 'basic',
+        admin: isAdmin,
       };
       await db.createUser(user);
       res.redirect('/');
