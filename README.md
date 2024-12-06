@@ -24,9 +24,15 @@ Messaging app with authentication! Users can create an account, log in, and view
 - [Tailwind CSS](https://tailwindcss.com/)
 - CSS
 
+<<<<<<< HEAD
 <img width="473" alt="members-only-homepage" src="https://github.com/user-attachments/assets/59f5f9cf-4572-4128-9faf-9ffcaa4e7da7">
 <img width="426" alt="members-only-login" src="https://github.com/user-attachments/assets/21824202-63c9-44f1-9b28-b5ed3d63693f">
 <img width="426" alt="members-only-signup" src="https://github.com/user-attachments/assets/7d19cefd-f7c5-49d8-aed3-ff324b34d7ae">
+=======
+<img width="426" alt="members-only-signup" src="https://github.com/user-attachments/assets/7d19cefd-f7c5-49d8-aed3-ff324b34d7ae">
+<img width="426" alt="members-only-login" src="https://github.com/user-attachments/assets/21824202-63c9-44f1-9b28-b5ed3d63693f">
+<img width="473" alt="members-only-homepage" src="https://github.com/user-attachments/assets/59f5f9cf-4572-4128-9faf-9ffcaa4e7da7">
+>>>>>>> 48e47aa (Update README)
 
 This project was completed as an assignment from The Odin Project.  
 Date completed: 12/05/24
